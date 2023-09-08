@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "vm2": "^3.9.19",
+    "xlsx-js-style": "^1.2.0"
+  }
+}
