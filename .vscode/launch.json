@@ -1,0 +1,29 @@
+{
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "浏览器环境",
+            "program": "${workspaceFolder}\\index.js",
+            "request": "launch",
+            "skipFiles": [
+                "<node_internals>/**",  // 忽略内部Node.js文件中的异常
+                "${workspaceFolder}/node_modules/*.js", // 忽略所有node_modules文件中的异常
+            ],
+            "runtimeExecutable": "node-inspect",
+            "type": "node"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "vscode环境",
+            "skipFiles": [
+                "<node_internals>/**",  // 忽略内部Node.js文件中的异常
+                "${workspaceFolder}/node_modules/**/*.js", // 忽略所有node_modules文件中的异常
+            ],
+            "program": "${workspaceFolder}\\index.js"
+        }
+    ]
+}
