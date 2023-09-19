@@ -91,7 +91,7 @@
     };
 
     addEnv.toolsFunc.expProxyLog = function expProxyLog() {
-        const workbook = myXlsx.readFile("D:\\test\\补环境\\志远补环境\\run\\log\\log.xlsx");
+        const workbook = myXlsx.readFile("./run/log/log.xlsx");
         clearSheet(workbook);
         let lastLog = sortLog();
         for (const item in lastLog) {
@@ -160,7 +160,7 @@
                 worksheet['!cols'] = cols;
             };
         };
-        myXlsx.writeFile(workbook, "D:\\test\\补环境\\志远补环境\\run\\log\\log.xlsx");
+        myXlsx.writeFile(workbook, "./run/log/log.xlsx");
     };
 
     addEnv.toolsFunc.printLog = function printLog() {

@@ -1,5 +1,5 @@
 const funcList = [];
-const attrList = ["name", "innerWidth", "innerHeight", "outerWidth", "outerHeight", "devicePixelRatio", "length", "status", "isSecureContext", "setTimeout", "setInterval", "clearInterval", "clearTimeout", "DeviceOrientationEvent", "DeviceMotionEvent", "top", "btoa", "atob", "eval", "window"];
+const attrList = ["onloadstart", "onprogress", "onabort", "onerror", "onload", "ontimeout", "onloadend"];
 
 
 const traversal = (obj) => {
@@ -73,7 +73,7 @@ const extractAttr = (obj, str) => {
     }.${funcName};
     `;
     });
-    proCode += `Object.defineProperties(${str}.prototype, {
+    proCode += `Object.defineProperties(${str}, {
         ${trav}
     });
 `;

@@ -24,22 +24,26 @@ Object.setPrototypeOf(document, HTMLDocument.prototype);
 
 ///////////////////////////////////////////  定义属性-->document  /////////////////////////////////////////////////
 (function () {
+    let my_get_location = {
+        location(){
+            return window.location;
+        }
+    }.location;
+    let my_set_location = {
+        location(){
+            debugger;
+        }
+    }.location;
+    
     Object.defineProperties(document, {
         location: {
-			get: addEnv.toolsFunc.safeFunction(
-				function location() {
-					return window.location;
-				}
-			),
-			set: addEnv.toolsFunc.safeFunction(
-				function location() {
-					debugger;
-				}
-			),
-			enumerable: true,
-			configurable: false,
-			
-		},
+            get: addEnv.toolsFunc.safeFunction(my_get_location),
+            set: addEnv.toolsFunc.safeFunction(my_set_location),
+            enumerable: true,
+            configurable: false,
+            
+        },
+        
     });
 })();
 ///////////////////////////////////////////  定义属性-->document  /////////////////////////////////////////////////

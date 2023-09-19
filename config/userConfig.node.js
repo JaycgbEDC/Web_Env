@@ -1,7 +1,7 @@
 /* 用户配置.js */
 /* 步骤：先扣代码，打开代理启动调试，调试完毕并成功后，关闭代理设置，再调试一遍生成最终环境配置 */
 const myConfig = {
-    proxy: false,  // 是否开启代理（开启为调试模式，输出日志到文件）
+    proxy: true,  // 是否开启代理（开启为调试模式，输出日志到文件）
     printLog: false,  // 是否开启日志打印（仅在proxy为true有效）
     algorithm: {  // 是否启用算法
         CryptoJs: false
